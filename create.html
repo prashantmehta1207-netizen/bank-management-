@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Digital Bank</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="topbar">
+            <a class="brand" href="index.html">
+                <span class="brand-icon"><i class="fas fa-university"></i></span>
+                <span>
+                    <h1>Digital Bank</h1>
+                    <p>Create a customer account</p>
+                </span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Dashboard</a>
+                <a class="active" href="create.html">Create Account</a>
+                <a href="accounts.html">Accounts</a>
+                <a href="transactions.html">Transactions</a>
+            </nav>
+        </header>
+
+        <main class="panel">
+            <div class="page-title">
+                <h2>Open New Account</h2>
+                <p>Enter customer details and an opening deposit.</p>
+            </div>
+
+            <div id="message" class="notice error hide"></div>
+
+            <form id="createAccountForm" class="form-grid" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text" required placeholder="John Doe" autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="accountNo">Account Number</label>
+                    <input id="accountNo" name="accountNo" type="text" required placeholder="ACC1001">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" name="phone" type="tel" required placeholder="+91 98765 43210" autocomplete="tel">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required placeholder="john@example.com" autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="accountType">Account Type</label>
+                    <select id="accountType" name="accountType" required>
+                        <option value="Savings">Savings</option>
+                        <option value="Current">Current</option>
+                        <option value="Salary">Salary</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="balance">Initial Deposit</label>
+                    <input id="balance" name="balance" type="number" required placeholder="1000.00" min="0" step="0.01">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn"><i class="fas fa-check"></i> Create Account</button>
+                    <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back</a>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        BankApp.bindCreateForm();
+    </script>
+</body>
+
+</html>

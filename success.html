@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Created - Digital Bank</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="topbar">
+            <a class="brand" href="index.html">
+                <span class="brand-icon"><i class="fas fa-university"></i></span>
+                <span>
+                    <h1>Digital Bank</h1>
+                    <p>Account created successfully</p>
+                </span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Dashboard</a>
+                <a href="create.html">Create Account</a>
+                <a href="accounts.html">Accounts</a>
+                <a href="transactions.html">Transactions</a>
+            </nav>
+        </header>
+
+        <main class="panel">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <div class="page-title">
+                <h2>Account Created</h2>
+                <p>The new customer account has been saved.</p>
+            </div>
+
+            <div id="successDetails"></div>
+
+            <div class="form-actions">
+                <a href="create.html" class="btn"><i class="fas fa-plus"></i> Create Another</a>
+                <a href="accounts.html" class="btn btn-outline"><i class="fas fa-list"></i> View Accounts</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        BankApp.renderSuccessPage();
+    </script>
+</body>
+
+</html>

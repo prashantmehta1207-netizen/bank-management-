@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Bank - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="topbar">
+            <a class="brand" href="index.html">
+                <span class="brand-icon"><i class="fas fa-university"></i></span>
+                <span>
+                    <h1>Digital Bank</h1>
+                    <p>Simple account management</p>
+                </span>
+            </a>
+            <nav class="nav">
+                <a class="active" href="index.html">Dashboard</a>
+                <a href="create.html">Create Account</a>
+                <a href="accounts.html">Accounts</a>
+                <a href="transactions.html">Transactions</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="panel hero-copy">
+                    <span class="eyebrow">Bank Management System</span>
+                    <h2>Manage customers, balances, and everyday account work.</h2>
+                    <p>
+                        Create accounts, view saved customers, and handle deposits or withdrawals from one clean
+                        browser-based app.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn" href="create.html"><i class="fas fa-user-plus"></i> Create Account</a>
+                        <a class="btn btn-outline" href="accounts.html"><i class="fas fa-list"></i> View Accounts</a>
+                    </div>
+                </div>
+                <div class="panel bank-visual">
+                    <strong>Secure records</strong>
+                    <span>Your data is stored in this browser for practice and demos.</span>
+                </div>
+            </section>
+
+            <section class="stats-grid" aria-label="Bank summary">
+                <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <span>Total Accounts</span>
+                    <strong id="totalAccounts">0</strong>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-wallet"></i>
+                    <span>Total Balance</span>
+                    <strong id="totalBalance">$0.00</strong>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-receipt"></i>
+                    <span>Transactions</span>
+                    <strong id="totalTransactions">0</strong>
+                </div>
+            </section>
+
+            <section class="feature-grid">
+                <div class="feature">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Create</h3>
+                    <p>Register customers with account number, contact details, and opening balance.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-magnifying-glass"></i>
+                    <h3>Search</h3>
+                    <p>Find accounts by name, number, email, or phone.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-money-bill-transfer"></i>
+                    <h3>Transact</h3>
+                    <p>Deposit or withdraw funds with balance checks.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-browser"></i>
+                    <h3>Practice</h3>
+                    <p>Runs with HTML, CSS, and JavaScript. No server setup needed.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        BankApp.renderDashboard();
+    </script>
+</body>
+
+</html>

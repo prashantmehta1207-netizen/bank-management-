@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts - Digital Bank</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="topbar">
+            <a class="brand" href="index.html">
+                <span class="brand-icon"><i class="fas fa-university"></i></span>
+                <span>
+                    <h1>Digital Bank</h1>
+                    <p>Saved customer accounts</p>
+                </span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Dashboard</a>
+                <a href="create.html">Create Account</a>
+                <a class="active" href="accounts.html">Accounts</a>
+                <a href="transactions.html">Transactions</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="page-title">
+                <h2>Accounts</h2>
+                <p>Search, review, and remove customer accounts.</p>
+            </div>
+
+            <div class="table-controls">
+                <input id="accountSearch" type="search" placeholder="Search by name, account, email, or phone">
+                <a class="btn" href="create.html"><i class="fas fa-plus"></i> New Account</a>
+            </div>
+
+            <div id="accountsTable"></div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        BankApp.renderAccountsPage();
+    </script>
+</body>
+
+</html>
